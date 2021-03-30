@@ -265,6 +265,22 @@ section.Home {
         grid-template-columns: 1fr 1fr; /* ipad screens*/
     }
 
+    .contact {
+        flex-direction: column;
+    }
+    .contact-form {
+        width: 100%;
+        padding: 30px 30px 20px;
+    }
+    .contact-form .row{
+        flex-direction: column;
+    }
+    .contact-form .input50,
+    .contact-form .input100 {
+        width: 100%;
+        margin: 0;
+    }
+
 }
 
 /*Mobile screens for SERVICES page */
