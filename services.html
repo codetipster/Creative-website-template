@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Agency</title>
+    <link rel="stylesheet" href="styles/index-styles.css">
+</head>
+<body>
+    <!--contains logos and toggle/nav-bars within divs-->
+    <header>
+        <!--can take an image withi the .logo div instead of text-->
+        <div class="logo">Creative Agency</div>
+        <!--for the sandwich like toggle that displays navigation when clicked-->
+        <div class="toggle"></div>
+        <!--navigation menu that opens when toggle is clicked-->
+        <div class="navigation "> <!--'active' property is added when building for active but removed and then put back with javascript-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!--social media icon on nav-bar-->
+            <div class="social-bar">
+                <ul>
+                    <li>
+                        <a href="https://facebook.com">
+                            <img id="sm-icons" src="images/facebook.png" target="_blank" alt="facebook-logo"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <img id="sm-icons" src="images/tweet.png" target="_blank" alt="twitter-logo"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com">
+                            <img id="sm-icons" src="images/linkedin.png" target="_blank" alt="linkedin-logo"/>
+                        </a>
+                    </li>
+                </ul>
+                <a href="mailto: talk2samuelnzekwe@gmail.com" class="email-icon">
+                    <img id="sm-icons" src="images/youtube.png" alt="should be an email icon"/>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- every website has a header and a section -->
+    <section>
+        <!--ONLY THIS PART OF THE SERVICES PAGE IS UNIQUE: we basically copied the index.html page and changed the section block-->
+        <div class="title">
+            <h1>Services that we can help you with</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Beatae rem voluptatem, quia dolorum repudiandae adipisci, 
+                quaerat at aspernatur est fugiat aut officia ducimus ex doloremque molestias? 
+                Quis facere, aliquid harum exercitationem tenetur provident distinctio illum dignissimos quaerat commodi cupiditate,
+                ratione molestias, corrupti minima natus? Aliquam quas neque voluptatum mollitia est.
+            </p>
+        </div>
+        <!--creating the services we offer -->
+        <div class="services">
+            <!--service one-->
+            <div class="service">
+                <!--image depicting service-->
+                <div class="icon">
+                    <img src="./images/001.png" alt="Design"/>
+                </div>
+                <h2>Design</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore animi aperiam ipsum aspernatur ad veniam provident praesentium repellendus at voluptatibus?
+            </div>
+            <!--service two-->
+            <div class="service">
+                <!--image depicting service-->
+                <div class="icon">
+                    <img src="./images/002.jpg" alt="Software Enginering"/>
+                </div>
+                <h2>Software Engineering</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore animi aperiam ipsum aspernatur ad veniam provident praesentium repellendus at voluptatibus?
+            </div>
+            <!--service three-->
+            <div class="service">
+                <!--image depicting service-->
+                <div class="icon">
+                    <img src="./images/001.png" alt="Coaching"/>
+                </div>
+                <h2>Coaching</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore animi aperiam ipsum aspernatur ad veniam provident praesentium repellendus at voluptatibus?
+            </div>
+            <!--Service four-->
+            <div class="service">
+                <!--image depicting service-->
+                <div class="icon">
+                    <img src="./images/001.png" alt="Transportation"/>
+                </div>
+                <h2>Transportation</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore animi aperiam ipsum aspernatur ad veniam provident praesentium repellendus at voluptatibus?
+            </div>
+            <!--service five-->
+            <div class="service">
+                <!--image depicting service-->
+                <div class="icon">
+                    <img src="./images/001.png" alt="Product"/>
+                </div>
+                <h2>Product Management</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore animi aperiam ipsum aspernatur ad veniam provident praesentium repellendus at voluptatibus?
+            </div>
+            <!--Sixth service-->
+            <div class="service">
+                <!--image depicting service-->
+                <div class="icon">
+                    <img src="./images/003.png" alt="deployment"/>
+                </div>
+                <h2>Deployment</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore animi aperiam ipsum aspernatur ad veniam provident praesentium repellendus at voluptatibus?
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

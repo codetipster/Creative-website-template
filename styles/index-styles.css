@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --primary-color: steelblue;   /* variables in CSS. this enables us to make a single change that affects multiple variables */
+}
+
+/* Remove all default space settings */
+* {
+    box-sizing: border-box; /* given padding wouldnt affect width of any element */
+    margin: 0;
+    padding:0;  
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 550;
+}
+
+p{
+    margin: 20px 0 10px 0; /* adding little spacing before and after the hero text */
+    font-size: 1.1rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;      /*centering our hero text next to the hero image */
+    align-items: center;
+    padding: 100px;
+    margin-top: 40px;
+}
+
+section.Home {
+    flex-direction: row;
+    margin-top: 0;
+}
+.btn {
+    cursor: pointer;
+    display: inline-block;  /* lets us add marging to a-tags*/
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 20px 0;
+    border: 0;
+}
+
+.btn:hover {
+    background: yellow;
+}
+
+.logo{
+    position: absolute; /* has been taken out of the regular flow of things*/
+    top: 30px;
+    left: 100px;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 20;        /*puts the logo closer ontop of your screen*/
+
+}
+
+/* TOGGLE*/
+.toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color) url(../images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 25;
+    cursor: pointer;
+
+}
+/* when toggle is clicked, the toggle icon should change to a cancel icon */
+.toggle.active {
+    background: var(--primary-color) url(../images/cancel.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home-content {
+    position: relative; /* stopping text from overflowing on image in smaller screens*/
+    z-index: 10;
+    max-width: 500px;
+    height: 50%;
+    align-content: center;
+    
+}
+
+.home-img{
+    position: absolute;
+    bottom: 20;
+    right: 0;
+    height: 80%;
+}
+
+#sm-icons {
+    width: 30px;
+    height: 30px;
+}
+
+.navigation{
+    /* display: none;  was hidden first since it doesnt appear till we click the toggle */
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation.active {
+    left: 0;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+.navigation ul li a {
+    font-size: 2.2rem;
+    color: #111;
+    text-decoration: none;
+    font-weight: 300;
+}
+.navigation ul li a:hover {
+    color: var(--primary-color);
+}
+.navigation .social-bar {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .email-icon{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+}
+.navigation .social-bar a {
+    display: inline-block;
+    transform: scale(0.5);
+}
+
+/*SERVICES PAGE STYLES */
+
+.services{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+}
+
+.services .service{
+    padding: 31px;
+}
+
+.services .service:hover{
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+}
+
+.services .service h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: darkblue;
+}
+
+
+
+.services .service .icon img{
+    max-width: 100px;
+}
+
+
+/* WORK styles*/
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.portfolio .item{
+    position: relative;
+    /* width: 300px; */
+    /* height: 300px; */
+    margin: 5px;
+}
+
+.portfolio .item img {
+    width: 100%;
+    height: 100px;
+}
+
+.portfolio .item .action{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.portfolio .item:hover .action {
+    opacity: 1;
+}
+
+.portfolio .item .action a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+}
+/* Making our site pages responsive on smaller screens using media querry */
+
+@media(max-width: 1068px) {
+    .home-img{
+        display: none;
+    }
+    
+    .logo {
+        top: 10px;
+        left: 40px;
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 100px 40px;
+    }
+    .navigation ul li a {
+        font-size: 2rem;
+    }
+
+    /*media querry part for SERVICES page*/
+
+    .services{
+        grid-template-columns: 1fr 1fr; /* ipad screens*/
+    }
+
+}
+
+/*Mobile screens for SERVICES page */
+
+@media(max-width: 768px){
+    .services{
+        grid-template-columns: 1fr; /* mobile screens*/
+    }
+
+    .services .service{
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        
+    }
+}
